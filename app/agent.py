@@ -2,14 +2,14 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 from collections import Counter
 
-# --------------------------------------------------
+
 # LOCAL AI MODEL (offline, free, pretrained)
-# --------------------------------------------------
+
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# --------------------------------------------------
+
 # SEVERITY KNOWLEDGE (domain expertise)
-# --------------------------------------------------
+
 SEVERITY_PROFILES = {
     "Critical": "system down, production outage, data loss, security breach",
     "High": "major feature broken, payment failure, repeated crashes",
@@ -45,9 +45,9 @@ def infer_severity(text: str) -> str:
     return max(scores, key=scores.get)
 
 
-# --------------------------------------------------
+
 # AGENT LOGIC
-# --------------------------------------------------
+
 def analyze_each_bug(bug_texts):
     analyzed = []
     for bug in bug_texts:
@@ -83,25 +83,25 @@ def analyze_text(context: str) -> str:
     trends = detect_trends(analyzed)
 
     report = []
-    report.append("🧠 LIVE AI BUG COPILOT REPORT")
+    report.append(" LIVE AI BUG COPILOT REPORT")
     report.append("--------------------------------")
 
-    report.append("🧩 Agent Reasoning Steps:")
-    report.append("1️⃣ Classified each incoming ticket")
-    report.append("2️⃣ Inferred severity using semantic similarity")
-    report.append("3️⃣ Prioritized bugs based on impact")
-    report.append("4️⃣ Compared with historical trends")
-    report.append("5️⃣ Generated recommended actions\n")
+    report.append("Agent Reasoning Steps:")
+    report.append("1. Classified each incoming ticket")
+    report.append("2. Inferred severity using semantic similarity")
+    report.append("3. Prioritized bugs based on impact")
+    report.append("4. Compared with historical trends")
+    report.append("5. Generated recommended actions\n")
 
-    report.append("📊 Severity distribution:")
+    report.append(" Severity distribution:")
     for sev, count in trends.items():
         report.append(f"- {sev}: {count}")
 
-    report.append("\n🔥 Top priority bugs:")
+    report.append("\n Top priority bugs:")
     for bug in prioritized[:3]:
         report.append(f"[{bug['severity']}] {bug['text']}")
 
-    report.append("\n✅ Suggested actions:")
+    report.append("\nSuggested actions:")
     if trends.get("Critical", 0) > 0:
         report.append("- Immediate rollback / hotfix required")
     if trends.get("High", 0) > 0:
