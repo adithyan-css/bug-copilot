@@ -1,0 +1,7 @@
+pathway==0.15.1
+openai
+langchain
+langgraph
+python-dotenv
+watchdog
+pandas

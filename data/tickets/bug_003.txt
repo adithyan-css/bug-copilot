@@ -1,0 +1,1 @@
+Payment gateway fails during checkout, users cannot complete transactions
