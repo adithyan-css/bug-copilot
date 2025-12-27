@@ -1,6 +1,6 @@
 # Bug Copilot
 
-> **Track-1 Alignment:** Live bug report analyzer with long-horizon intelligence
+> **Track-1 Alignment:** Bug report analyzer with live ticket feeds and report generation for longer horizons
 
 **Bug Copilot** is a real-time bug report analyzer built using **Pathway’s streaming engine**.  
 It continuously monitors bug tickets and dynamically updates severity, priority, and reports as new information arrives.
