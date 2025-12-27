@@ -1,50 +1,50 @@
 # Bug Copilot
 
-> **Track-1 Alignment:** Bug report analyzer with live ticket feeds and report generation for longer horizons
+> **Track-1 Alignment:** Live bug report analyzer with long-horizon intelligence
 
-**Bug Copilot** is a live bug report analyzer built using **Pathway’s streaming engine**.  
-It enables **real-time monitoring** of bug tickets and dynamically updates bug severity, priorities, and reports as new information arrives — ensuring decisions are always based on the latest system state.
+**Bug Copilot** is a real-time bug report analyzer built using **Pathway’s streaming engine**.  
+It continuously monitors bug tickets and dynamically updates severity, priority, and reports as new information arrives.
 
 ---
 
 ## Problem
-Software teams receive bug reports continuously, but most bug tracking tools assign priorities once and rarely adapt as new details emerge. This leads to delayed responses, incorrect prioritization, and repeated critical issues going unnoticed.
+Software teams receive bug reports continuously, but most traditional bug tracking tools are **not truly real-time**.  
+They require **manual or repeated re-runs** to reprocess data when new bug information arrives and typically assign priority only once. This leads to delayed responses, stale analysis, and critical issues going unnoticed.
 
 ---
 
 ## Solution
-Bug Copilot introduces **real-time intelligence** into bug triaging.
+Bug Copilot brings **real-time intelligence** to bug triaging.
 
-- Pathway continuously monitors incoming bug tickets in real time  
-- Every new or updated ticket triggers an AI agent  
-- Bug severity and priorities are updated dynamically  
-- Reports evolve automatically over long time horizons  
+- Live monitoring of bug tickets using Pathway  
+- Event-driven AI agent triggered on every update  
+- Dynamic severity and priority updates  
+- Reports evolve automatically over long horizons  
 
-The system always reflects the **current state of the system**, without batch reprocessing or stale analysis.
+The system always reflects the **current system state**, without batch reprocessing.
 
 ---
-
-## Why it matters (for developers)
-- Reduces manual bug triaging effort  
-- Helps teams focus on the most critical issues as they evolve  
-- Provides clear visibility into recurring and high-risk problem areas  
+## Why it matters
+- No manual reruns or re-triaging  
+- Real-time focus on critical bugs  
+- Clear visibility into recurring risks  
 
 ---
 
 ## How it works
 1. Bug tickets are added or updated in `data/tickets/`  
 2. Pathway detects changes in real time  
-3. An event-driven AI agent reasons over cumulative bug history  
+3. An AI agent reasons over cumulative bug history  
 4. Updated insights and reports are generated instantly  
 
 ---
 
 ## Demo
 
-### Real-time monitoring with Pathway
+**Live monitoring with Pathway**  
 ![Pathway live monitoring](screenshots/pathway_live_dashboard.png)
 
-### Automatically generated bug trend report
+**Automatically generated bug report**  
 ![Generated bug report](screenshots/generated_bug_report.png)
 
 ---
@@ -57,17 +57,6 @@ The system always reflects the **current state of the system**, without batch re
 ---
 
 ## Setup & Usage
-
-### Install dependencies
 ```bash
 pip install -r requirements.txt
-
-## System Requirements
-
-This project is designed to run **exclusively on a Linux (Ubuntu) environment**.
-
-- Pathway framework requires Linux-based system support
-- Native Windows execution is **not supported**
-- Windows users must run the project using **WSL (Ubuntu)**
-
-✅ Verified on Ubuntu 22.04 LTS
+python main.py
