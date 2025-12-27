@@ -61,3 +61,13 @@ The system always reflects the **current state of the system**, without batch re
 ### Install dependencies
 ```bash
 pip install -r requirements.txt
+
+## System Requirements
+
+This project is designed to run **exclusively on a Linux (Ubuntu) environment**.
+
+- Pathway framework requires Linux-based system support
+- Native Windows execution is **not supported**
+- Windows users must run the project using **WSL (Ubuntu)**
+
+✅ Verified on Ubuntu 22.04 LTS
