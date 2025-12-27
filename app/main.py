@@ -42,7 +42,7 @@ def main():
         on_change=on_update
     )
 
-    pw.run()
+    pw.run(monitoring_level=pw.MonitoringLevel.NONE)
 
 
 
