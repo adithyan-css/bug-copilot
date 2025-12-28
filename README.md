@@ -24,12 +24,6 @@ Bug Copilot brings **real-time intelligence** to bug triaging.
 The system always reflects the **current system state**, without batch reprocessing.
 
 ---
-## Why it matters
-- No manual reruns or re-triaging  
-- Real-time focus on critical bugs  
-- Clear visibility into recurring risks  
-
----
 
 ## How it works
 1. Bug tickets are added or updated in `data/tickets/`  
@@ -46,6 +40,13 @@ The system always reflects the **current system state**, without batch reprocess
 
 **Automatically generated bug report**  
 ![Generated bug report](screenshots/generated_bug_report.png)
+
+---
+
+## Why it matters
+- No manual reruns or re-triaging  
+- Real-time focus on critical bugs  
+- Clear visibility into recurring risks  
 
 ---
 
